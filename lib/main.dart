@@ -64,7 +64,8 @@ class _calculatorAppState extends State<calculatorApp> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // operations will be displayed in this screen
+            Center(child: Row()),
+            // operations will be  displayed in this screen
             Container(
               alignment: Alignment.center,
               width: 20.5,
@@ -75,7 +76,10 @@ class _calculatorAppState extends State<calculatorApp> {
             // Line 1
             Row(
               children: [
-                ElevatedButton(onPressed: _display(1), child: Text("1")),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text("1"),
+                ),
                 ElevatedButton(onPressed: () {}, child: Text("2")),
                 ElevatedButton(onPressed: () {}, child: Text("3")),
                 ElevatedButton(onPressed: _multiplication, child: Text("X")),
@@ -105,8 +109,8 @@ class _calculatorAppState extends State<calculatorApp> {
             //Line4
             Row(
               children: [
+                ElevatedButton(onPressed: () {}, child: Text("CLR")),
                 ElevatedButton(onPressed: () {}, child: Text("0")),
-                ElevatedButton(onPressed: () {}, child: Text("Clear")),
                 ElevatedButton(onPressed: () {}, child: Text(".")),
                 ElevatedButton(onPressed: _division, child: Text("/")),
               ],
